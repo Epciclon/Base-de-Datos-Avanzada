@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "run.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "run.py"
+    }
+  ],
+  "env": {
+    "DB_HOST": "sql.bsite.net",
+    "DB_USER": "jiproano1_BancoPichincha",
+    "DB_PASSWORD": "SABDD_22412",
+    "DB_NAME": "jiproano1_BancoPichincha",
+    "SECRET_KEY": "tu_clave_secreta_muy_segura_para_jwt_banco_pichincha_2025"
+  },
+  "functions": {
+    "run.py": {
+      "maxDuration": 30
+    }
+  }
+}
